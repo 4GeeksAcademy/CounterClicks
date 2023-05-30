@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "/src/img/contador.png" ;
 import Boton from "../component/Boton";
-
+import Contador from "../component/Contador";
+import { useState } from "react";
 
 
 
@@ -11,12 +12,14 @@ import Boton from "../component/Boton";
 //create your first component
 const Home = () => {
 
+	const [numClicks,setNumClic] = useState (0);
+
 	const manejarClick = () => {
-		console.log("click");
+		setNumClic (numClicks + 1) ;
 	}
 
 		const reinciarContador = () => {
-			console.log ("reinicar");
+			setNumClic (0);
 		}
 	return (
 		<div className="text-center">
@@ -28,6 +31,7 @@ const Home = () => {
 				/>
 			</div>
 			<div className="main-container">
+				<Contador numClicks={numClicks}/>
 				<Boton
 				texto = "click"
 				esBotonDeClick ={true}

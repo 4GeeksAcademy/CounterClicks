@@ -24,3 +24,14 @@ html, body {
     height: 80px;
     background-color: darkgreen;
 }
+
+.contador{
+    min-width: 300px;
+    height: 300px;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: dimgrey;
+    border: 8px solid gray;
+}
